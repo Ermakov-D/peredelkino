@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mm_project current="1" serial_port="COM10" programmer="" board="Arduino Pro or Pro Mini (5V, 16 MHz) w/ ATmega328" includePaths=";$(LIBRARIES)/OLED_I2C;$(LIBRARIES)/OLED_I2CDocumentation;$(LIBRARIES)/OLED_I2Chardware;$(LIBRARIES)/OLED_I2Chardware/arm;$(LIBRARIES)/OLED_I2Chardware/avr;$(LIBRARIES)/OLED_I2Chardware/pic32;$(LIBRARIES)/OLED_I2CLicense;$(LIBRARIES)/DS3231;$(LIBRARIES)/DS3231hardware;$(LIBRARIES)/DS3231hardware/arm;$(LIBRARIES)/DS3231hardware/avr;$(LIBRARIES)/DS3231hardware/pic32;$(LIBRARIES)/DHT_sensor_library;$(LIBRARIES)/EEPROM" libPaths="" srcPaths="" libs="" useCodeAutomation="1" linkPrintfVersion="20145347" serialPortSpeed="9600" isLibrary="0">
+    <files>
+        <file name="peredelkino.cpp" open="yes"/>
+        <file name="mariamole_auto_generated.h" open="no"/>
+        <file name="floatToString.h" open="no"/>
+        <file name="EEPROM_float_rw.h" open="yes"/>
+    </files>
+    <externals>
+        <external name="OLED_I2C/DefaultFonts.c" open="no"/>
+        <external name="OLED_I2C/hardware/arm/HW_ARM.h" open="no"/>
+        <external name="OLED_I2C/hardware/arm/HW_ARM_defines.h" open="no"/>
+        <external name="OLED_I2C/hardware/avr/HW_AVR.h" open="no"/>
+        <external name="OLED_I2C/hardware/avr/HW_AVR_defines.h" open="no"/>
+        <external name="OLED_I2C/hardware/pic32/HW_PIC32.h" open="no"/>
+        <external name="OLED_I2C/hardware/pic32/HW_PIC32_defines.h" open="no"/>
+        <external name="OLED_I2C/OLED_I2C.cpp" open="no"/>
+        <external name="OLED_I2C/OLED_I2C.h" open="no"/>
+        <external name="DS3231/DS3231.cpp" open="no"/>
+        <external name="DS3231/DS3231.h" open="no"/>
+        <external name="DS3231/hardware/arm/HW_ARM.h" open="no"/>
+        <external name="DS3231/hardware/arm/HW_ARM_defines.h" open="no"/>
+        <external name="DS3231/hardware/avr/HW_AVR.h" open="no"/>
+        <external name="DS3231/hardware/avr/HW_AVR_defines.h" open="no"/>
+        <external name="DS3231/hardware/pic32/HW_PIC32.h" open="no"/>
+        <external name="DS3231/hardware/pic32/HW_PIC32_defines.h" open="no"/>
+        <external name="DHT_sensor_library/DHT.cpp" open="no"/>
+        <external name="DHT_sensor_library/DHT.h" open="no"/>
+        <external name="EEPROM/EEPROM.cpp" open="no"/>
+        <external name="EEPROM/EEPROM.h" open="no"/>
+    </externals>
+</mm_project>
