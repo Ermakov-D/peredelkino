@@ -1,0 +1,28 @@
+[Eagle]
+Version="07 03 00"
+Platform="Linux"
+Serial="62191E841E-LSR-WLM-1EL"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="/opt/eagle/lbr/74ac-logic.lbr"
+UsedLibrary="/opt/eagle/lbr/74ttl-din.lbr"
+UsedLibrary="/opt/eagle/lbr/74xx-eu.lbr"
+UsedLibrary="/opt/eagle/lbr/74xx-little-de.lbr"
+UsedLibrary="/opt/eagle/lbr/74xx-little-us.lbr"
+UsedLibrary="/opt/eagle/lbr/74xx-us.lbr"
+UsedLibrary="/opt/eagle/lbr/resistor.lbr"
+UsedLibrary="/opt/eagle/lbr/supply1.lbr"
+UsedLibrary="/opt/eagle/lbr/MyComp.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="346 154 1646 969"
+State=2
+Number=0
+
+[Desktop]
+Screen="3286 1200"
+Window="Win_1"
