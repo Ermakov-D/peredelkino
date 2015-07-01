@@ -30,17 +30,19 @@ boolean AM = false;
 boolean PM = false;
 boolean RelayStatus = false;
 
-// Переменная для конвертации 
+// Conversion template 
 char buffer[10];
 
-//Переменные для задержки
+//values for loop 
 int show = 1;
 unsigned long currentTime;
 unsigned long loopTime;
 
-// Ячейки для данных
-// 0 - максимальная температура (maxTerm)
-// 4 - минимальная температура (minTerm)
+// EEPROM values
+// 0 -  (maxTerm)
+// 4 -  (minTerm)
+// 5 - morning
+// 6 - night
 
 void setup() {
   myOLED.begin();
@@ -61,11 +63,11 @@ void loop() {
   if (time_now.hour == 8 && time_now.min >=0 && time_now.min < 20) {
   // digitalWrite(LIGHTPIN,HIGH);
    digitalWrite(RELAYPIN,LOW);
-   AM = true;RelayStatus = true;
+   AM = true;RelayStatus = true;EEPROM.write(5,byte(AM));
   } else if (time_now.hour == 20 && time_now.min >=0 && time_now.min < 20) {
   // digitalWrite(LIGHTPIN,HIGH);
    digitalWrite(RELAYPIN,LOW);
-   PM = true;RelayStatus = true;   
+   PM = true;RelayStatus = true;EEPROM.write(6,byte(PM));   
   } else {
   // digitalWrite(LIGHTPIN,LOW);
    digitalWrite(RELAYPIN,HIGH);
@@ -73,8 +75,8 @@ void loop() {
   }
   
   if (time_now.hour == 0 && time_now.min == 1) {
-   AM = false;
-   PM = false;
+   AM = false;EEPROM.write(5,byte(AM));
+   PM = false;EEPROM.write(6,byte(PM));
    maxTerm = -50;
    minTerm = 50;   
   delay (60000);
@@ -119,13 +121,13 @@ void loop() {
 void show_time() {
   //Serial.println("Time");
 	myOLED.setFont(SmallFont);
-  myOLED.print(rtc_time.getDOWStr(), CENTER, 0);   // Отображение дня недели
+  myOLED.print(rtc_time.getDOWStr(), CENTER, 0);   // ??????????? ??? ??????
   String stringOne = rtc_time.getTimeStr();
-  myOLED.print(rtc_time.getDateStr(), CENTER, 57);      // Отображение даты
+  myOLED.print(rtc_time.getDateStr(), CENTER, 57);      // ??????????? ????
   myOLED.setFont(MegaNumbers);
-  myOLED.print(stringOne.substring(0,2), 4, 12);   // Отображение часов
-  myOLED.print("/", 51, 12);                       // Отображение двоеточия
-  myOLED.print(stringOne.substring(3,5), 75, 12);  // Отображение минут
+  myOLED.print(stringOne.substring(0,2), 4, 12);   // ??????????? ?????
+  myOLED.print("/", 51, 12);                       // ??????????? ?????????
+  myOLED.print(stringOne.substring(3,5), 75, 12);  // ??????????? ?????
     
   myOLED.update();  
 }
@@ -189,6 +191,9 @@ void show_solid(){
 
 void show_stats(){
 	//Serial.println("Stats");
+   AM=EEPROM.read(5);
+   PM=EEPROM.read(6);
+
    show_title("Ghjdthrf");
    myOLED.print("Gjkbd enhjv   -",LEFT,12);
    if (AM) myOLED.print("LF",RIGHT,12);

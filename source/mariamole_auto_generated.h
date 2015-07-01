@@ -30,13 +30,6 @@
 
 /*--MARIMOLE-DEF_BEGIN--*/
 void show_title(String Title);
-void show_stats();
-void show_solid();
-void show_hum();
-void show_term();
-void show_time();
-void loop();
-void setup();
 /*--MARIMOLE-DEF_END--*/
 
 #include <HW_ARM.h>
